@@ -2,16 +2,16 @@
   hosts: web
   vars:
     course: "devops"
-    Duraton: "120min"
+    Duration: "120min"
     Trainer: "shres"
 
   tasks:
   - name: print the information
     ansible.builtin.debug:
-      msg: "hi, i am learning {{course}}, Duration is: {{Duraton}}, Trainer is: {{Trainer}}"
+      msg: "hi, i am learning {{course}}, Duration is: {{Duration}}, Trainer is: {{Trainer}}"
 
   - name: print the information again
     vars:
       course: "ansible"
     ansible.builtin.debug:
-      msg: "hi, i am learning {{course}}, Duration is: {{Duraton}}, Trainer is: {{Trainer}}"
+      msg: "hi, i am learning {{course}}, Duration is: {{Duration}}, Trainer is: {{Trainer}}"
