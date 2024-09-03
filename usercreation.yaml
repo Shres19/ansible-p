@@ -1,0 +1,11 @@
+- name: User creation
+  hosts: web
+  become: yes #sudo access
+  tasks:
+  - name: check user exists or not
+    ansible.builtin.command: id expense
+    register: USERID #USERID is variable that gets output from command
+  - name: Print user info
+    ansible.builtin.debug:
+      msg: "User info: {{USERID}}"
+
