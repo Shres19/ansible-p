@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars:
-    input_num: 10
+    input_num: 10.0
   tasks:
   - name: print enter number is less than 10
     ansible.builtin.debug:
