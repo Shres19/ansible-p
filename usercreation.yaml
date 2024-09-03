@@ -6,6 +6,9 @@
     ansible.builtin.command: id expense
     register: USERID #USERID is variable that gets output from command
     ignore_errors: true
+  - name: Create User
+    ancible.builtin.command: id expense
+    when: USERID.rc != 0
   - name: Print user info
     ansible.builtin.debug:
       msg: "User info: {{USERID}}"
