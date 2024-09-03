@@ -18,7 +18,7 @@
       - IAM
       - S3
   tasks:
-  - print: print the course information
+  - Name: print the course information
     ansible.builtin.debug:
       msg: "Hi, i am learning {{ course }}, with duration {{ duration }}, topics are: {{ topics }}, and live: {{ live }}, tools are: {{ tools }}"
     ignore_errors: True
