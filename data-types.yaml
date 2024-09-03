@@ -8,12 +8,15 @@
     - Linux
     - shell
     - Ansible
+    - aws
     live: true
     tools:
       ci: jenkins
       cm: ansible
-      aws: aws
-  
+      cloud: aws
+      aws:
+      - IAM
+      - S3
   task:
   - name: print the course information
     ansible.builtin.debug:
