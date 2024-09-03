@@ -1,0 +1,16 @@
+- name: run a script with condition
+  hosts: local
+  connection: local
+  vars_prompt:
+  - name: input_num
+    prompt: Please enter your number
+    private: false
+  tasks:
+  - name: print enter number is less than 10
+    ansible.builtin.debug:
+      msg: "{{ input_num }} is less than 10"
+    when: input_num | int < 10  #in prompt input is considered as string so '| int' will helps to convert from string to int
+  - name: print enter number is greater or equal than 10
+    ansible.builtin.debug:
+      msg: "{{ input_num }} is greater or equal than 10"
+    when: input_num | int >= 10
