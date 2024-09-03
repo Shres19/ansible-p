@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars:
-    input_num: 10
+    input_num: 100
   tasks:
   - name: print enter number is less than 10
     ansible.builtin.debug:
@@ -15,7 +15,7 @@
   - name: print enter number is equal to 10
     ansible.builtin.debug:
       msg: "Given number {{ input_num }} is equal to 10"
-    when: input_num = 10
+    when: input_num == 10
   # vars_prompt:
   # - name: input_num
   #   prompt: Please enter your number
