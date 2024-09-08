@@ -4,4 +4,4 @@
   tasks:
   - name: print the default varaible
     ansible.builtin.debug:
-      msg: "Hello {{ course | defalut(terraform)}}"
+      msg: "Hello {{ course | defalut('terraform')}}"
