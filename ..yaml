@@ -1,0 +1,13 @@
+-name: ngnix install
+ hostes: web
+ become: yes
+ tasks:
+ - name: ngnix install
+   ansible.builtin.package
+     name: ngnix
+     state: present
+ - name: ngnix install
+   ansible.builtin.service
+     name: ngnix
+     state: started
+     enabled:yes

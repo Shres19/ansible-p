@@ -1,8 +1,8 @@
-- name: run script n loop
+- name: Install applications
   hosts: web
   become: yes
   tasks:
-  - name: print names
+  - name: install package
     ansible.builtin.package:
       name: "{{item}}"
       state: present
